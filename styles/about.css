@@ -1,0 +1,119 @@
+#about {
+    background-color: var(--ice);
+}
+
+#about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about .container figure {
+    position: relative;
+}
+
+#about .container figure::before {
+    content: '';
+    width: 75%;
+    height: 100%;
+    background-color: var(--red);
+    border-radius: 0 0.5rem 0 0;
+
+    position: absolute;
+    z-index: 0;
+    top: -2.5rem;
+}
+
+#about .container figure img {
+    width: 100%;
+    position: relative;
+}
+
+#about .container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+#about .container .text h3 {
+    color: var(--black);
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    width: fit-content;
+}
+
+#about .container .text h3:focus {
+    outline: 2px solid var(--red);
+    border-radius: 0.25rem;
+}
+
+#about .container .text p {
+    color: var(--black);
+    opacity: 0.75;
+    line-height: 1.5rem;
+}
+
+@media(min-width: 768px) {
+    #about .container figure::before {
+        width: 20rem;
+        height: 100%;
+        top: -3.5rem;
+        left: 4.5rem;
+        border-radius: 0.5rem 0.5rem 0.5rem 0;
+    }
+
+    #about .container figure img {
+        height: auto;
+        width: 20rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+}
+
+@media(min-width: 1024px) {
+    #about .container {
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5rem;
+    }
+
+    #about .container figure::before {
+        width: 25rem;
+        height: 100%;
+        top: -3.5rem;
+        left: 4.5rem;
+        border-radius: 0.5rem 0.5rem 0.5rem 0;
+    }
+
+    #about .container figure img {
+        height: auto;
+        width: 25rem;
+        border-radius: 0.5rem;
+    }
+
+    #about .container .text {
+        padding: 0 3rem;
+    }
+
+    #about .container .text p {
+        width: 25rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    #about .container {
+        padding: 0 8rem;
+    }
+
+    #about .container .text p {
+        width: 20rem;
+    }
+}
+
+@media(min-width: 1920px) {
+    #about .container .text p {
+        width: 25rem;
+    }
+}

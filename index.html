@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luca Merighi">
+    <meta name="description" content="DoggyShelter é um abrigo São Paulo para cachorrinhos abandonados. Somos uma instituição que busca cuidar e encontrar um lar para esses seres de quatro patas.">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/location.css">
+    <link rel="stylesheet" href="./styles/testimonials.css">
+    <link rel="stylesheet" href="./styles/contacts.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+
+    <!-- Mapa Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <link rel="shortcut icon" href="./img/icons/favicon.svg" type="image/x-icon">
+    <title>DoggyShelter</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a 
+            href="#" 
+            class="logo">
+                <img 
+                src="./img/icons/logo-doggy.svg" 
+                alt="Logo da DoggyShelter, é uma patinha de cachorro da cor branca com um coração vermelho">
+                <span>
+                    Doggy<span>Shelter</span>
+                </span>
+            </a>
+
+            <ul class="links">
+                <li>
+                    <a href="#home">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        Sobre Nós
+                    </a>
+                </li>
+                <li>
+                    <a href="#services">
+                        Serviços
+                    </a>
+                </li>
+                <li>
+                    <a href="#testimonials">
+                        Depoimentos
+                    </a>
+                </li>
+                <li>
+                    <a href="#location">
+                        Localização
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacts">
+                        Contatos
+                    </a>
+                </li>
+            </ul>
+
+            <div class="toggle-sidebar-icons" tabindex="0">
+                <img 
+                src="./img/icons/menu.svg" 
+                alt="Ícone de Menu da cor vermelha para abrir a Sidebar" 
+                aria-expanded="false"
+                aria-label="Botão Abrir Menu (ou Sidebar)"
+                class="menu-icon">
+
+                <img 
+                src="./img/icons/close.svg" 
+                alt="Ícone de Fechar da cor vermelha para fechar a Sidebar" 
+                aria-expanded="true"
+                aria-label="Botão Fechar Menu (ou Sidebar)"
+                class="close-icon hide">
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar">
+        <div class="container">
+            <ul class="sidebar-links">
+                <li>
+                    <a href="#home">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        Sobre Nós
+                    </a>
+                </li>
+                <li>
+                    <a href="#services">
+                        Serviços
+                    </a>
+                </li>
+                <li>
+                    <a href="#testimonials">
+                        Depoimentos
+                    </a>
+                </li>
+                <li>
+                    <a href="#location">
+                        Localização
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacts">
+                        Contatos
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="social-media-links">
+                <li>
+                    <a 
+                    href="https://www.instagram.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/instagram.svg"
+                        alt="Ícone do Instagram branco para redes sociais">
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="https://www.facebook.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/facebook.svg"
+                        alt="Ícone do Facebook branco para redes sociais">
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="https://www.youtube.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/youtube.svg"
+                        alt="Ícone do YouTube branco para redes sociais">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="text">
+                    <h1 tabindex="0">Doggy<span>Shelter</span></h1>
+                    <h3>Um lar para seu cachorrinho 🐕</h3>
+                    <p>
+                        DoggyShelter é um abrigo para cachorrinhos localizado em São Paulo, nosso objetivo é acolher cachorros desabrigados e cuidá-los com muito amor.
+                    </p>
+                </div>
+                <figure>
+                    <img 
+                    src="./img/icons/dog-1.svg" 
+                    alt="Desenho de um cachorro com pelo loiro em 2d">
+                </figure>
+                <div class="stats" tabindex="0">
+                    <div class="stats-card">
+                        <span>+500</span>
+                        <p>Cachorrinhos adotados</p>
+                    </div>
+                    <div class="stats-card">
+                        <span>+30</span>
+                        <p>Cachorrinhos aguardando por um lar</p>
+                    </div>
+                    <div class="stats-card">
+                        <span>+50</span>
+                        <p>Especialistas disponíveis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-right"></div>
+
+        <section id="about">
+            <div class="container">
+                <figure>
+                    <img 
+                    src="./img/doggy-shelter/dog-1.jpg"
+                    width="300px" 
+                    alt="Foto de um cachorro com pelo loiro olhando para a camêra">
+                </figure>
+                <div class="text">
+                    <h3 tabindex="0"> 
+                        Sobre Nós
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus vero voluptatibus nostrum nihil necessitatibus, recusandae suscipit quisquam placeat ipsam accusamus sit et aperiam autem nobis officia blanditiis quasi temporibus.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus vero voluptatibus nostrum nihil necessitatibus, recusandae suscipit quisquam placeat ipsam accusamus sit et aperiam autem nobis officia blanditiis quasi temporibus.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-left"></div>
+
+        <section id="services">
+            <div class="container">
+                <div class="text">
+                    <h3 tabindex="0">
+                        Serviços
+                    </h3>       
+                    <p>
+                        Com menos de 1 ano desde sua fundação, o <span>Doggy</span><span>Shelter</span> já conseguiu abrigar inúmeros cachorrinhos de rua, possibilitanto sua adoção e gerando muita felicidade para as pessoas e seus bichinhos. Aqui estão nossos serviços que oferecemos aos nossos clientes. 
+                    </p>      
+                </div>
+                <div class="services-cards-container">
+                    <div class="service-card" tabindex="0">
+                        <img 
+                        src="./img/icons/home-shelter.svg"
+                        alt="Ícone de uma casa para abrigo">
+                        <h3>
+                            Abrigo
+                        </h3>
+                        <p>
+                            Precisa deixar seu bichinho com alguém? Conte conosco! 
+                        </p>
+                    </div>
+                    <div class="service-card" tabindex="0">
+                        <img 
+                        src="./img/icons/clinic.svg" 
+                        alt="Ícone de clínica para consultas">
+                        <h3>
+                            Hospitalidade
+                        </h3>
+                        <p>
+                            Temos um veterinário que pode examinar seu pet.
+                        </p>
+                    </div>
+                    <div class="service-card" tabindex="0">
+                        <img 
+                        src="./img/icons/dog-2.svg" 
+                        alt="Ícone de um cahorro">
+                        <h3>
+                            Acolhimento
+                        </h3>
+                        <p>
+                            Acolhemos cachorrinhos de rua e damos um abrigo a ele.
+                        </p>
+                    </div>
+                    <div class="service-card" tabindex="0">
+                        <img 
+                        src="./img/icons/rations.svg" 
+                        alt="Ícone de ração para cachorro">
+                        <h3>
+                            Pet Shop
+                        </h3>
+                        <p>
+                            Temos os melhores alimentos pelos melhores preços.
+                        </p>
+                    </div>
+                </div>
+                <a 
+                href="https://api.whatsapp.com/send?phone=+5519989103966&text=Olá! Gostaria de solicitar um serviço da DoggyShelter!" 
+                target="_blank"
+                class="request-service-button">
+                    <img 
+                    src="./img/icons/whatsapp.svg" 
+                    alt="Ícone Whatsapp do branco">
+                        Solicitar um Serviço
+                </a>
+            </div>
+        </section>
+
+        <div class="divider-right"></div>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="text">
+                    <h3 tabindex="0">
+                        Depoimentos
+                    </h3>
+                    <p>
+                        O que nossos clientes dizem sobre o <span>Doggy</span><span>Shelter</span> :)
+                    </p>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <blockquote 
+                            tabindex="0" 
+                            class="testimonial-card">
+                                <p>
+                                    <span class="quote">
+                                        &ldquo;
+                                    </span>
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                                </p>
+
+                                <cite class="user-feedback">
+                                    <img 
+                                    src="./img/doggy-shelter/user-1.jpg" 
+                                    alt="Foto do cliente que fez o depoimento">
+                                    <span class="user-name">
+                                        Stephanie Henry
+                                    </span>
+                                </cite>
+                            </blockquote>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <blockquote 
+                            tabindex="0"
+                            class="testimonial-card">
+                                <p>
+                                    <span class="quote">
+                                        &ldquo;
+                                    </span>
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                                </p>
+
+                                <cite class="user-feedback">
+                                    <img 
+                                    src="./img/doggy-shelter/user-2.jpg" 
+                                    alt="Foto do cliente que fez o depoimento">
+                                    <span class="user-name">
+                                        Patrick Steeves
+                                    </span>
+                                </cite>
+                            </blockquote>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <blockquote 
+                            tabindex="0"
+                            class="testimonial-card">
+                                <p>
+                                    <span class="quote">
+                                        &ldquo;
+                                    </span>
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                                </p>
+
+                                <cite class="user-feedback">
+                                    <img 
+                                    src="./img/doggy-shelter/user-3.jpg" 
+                                    alt="Foto do cliente que fez o depoimento">
+                                    <span class="user-name">
+                                        Shawn James
+                                    </span>
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination" tabindex="0"></div>
+                </div>
+                <div class="brands">
+                    <h3 tabindex="0">
+                        Empresas que confiam no nosso trabalho e apoiam nossas causas
+                    </h3>
+                    <div class="brands-img">
+                        <img 
+                        src="./img/icons/logo-rocketseat.svg" 
+                        alt="Logo da Rocketseat roxa">
+
+                        <img 
+                        src="./img/icons/logo-datadog.svg" 
+                        alt="Logo da Datadog roxa">
+
+                        <img 
+                        src="./img/icons/logo-pedigree.svg" 
+                        alt="Logo da Pedigree">
+
+                        <img 
+                        src="./img/icons/logo-royal-canin.svg" 
+                        alt="Logo da Royal Canin da cor vermelha">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-left"></div>
+
+        <section id="location">
+            <div class="container">
+                <div class="text">
+                    <h3 tabindex="0">
+                        Localização
+                    </h3>
+                    <p>
+                        O <span>Doggy</span><span>Shelter</span> atualmente se encontra somente em <strong>Campinas - São Paulo</strong>. Porém temos planos de expandir nossos abrigos pelo estado todo 😊.
+                    </p>
+                </div>
+                <div class="content">
+                    <div id="mapid"></div>
+                </div>
+                <div class="visit-text">
+                    <h3 tabindex="0">
+                        Venha nos Visitar!
+                    </h3>
+                    <p>
+                        Estamos abertos de segunda até sábado, das 9h até 18h.  
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-right"></div>
+
+        <section id="contacts">
+            <div class="container">
+                <div class="text">
+                    <h3 tabindex="0">
+                        Entre em contato com a gente!
+                    </h3>
+                    <ul class="contacts-list">
+                        <li>
+                            <img 
+                            src="./img/icons/map-pin.svg" 
+                            alt="Ícone de pino de mapa para localização">
+                            Rua São Luís do Paraitinga
+                        </li>
+                        <li>
+                            <img 
+                            src="./img/icons/e-mail.svg" 
+                            alt="Ícone de e-mail para contato">
+                            contato@doggyshelter.com
+                        </li>
+                        <li>
+                            <img 
+                            src="./img/icons/phone.svg" 
+                            alt="Ícone de telefone para o número de contato">
+                            19 99845-6754
+                        </li>
+                        <li>
+                            <img 
+                            src="./img/icons/phone.svg" 
+                            alt="Ícone de telefone para o número de contato">
+                            19 98947-3966
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="form">
+                    <fieldset class="fieldset">
+                        <legend tabindex="0">Entre em Contato</legend>
+
+                        <div class="name-input">
+                            <label for="name">
+                                Nome:
+                            </label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            required
+                            minlength="4"
+                            placeholder="Digite seu nome..">
+                        </div>
+
+                        <div class="email-input">
+                            <label for="email">
+                                E-mail:
+                            </label>
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            required
+                            pattern=".+@.+\.com"
+                            placeholder="Digite seu e-mail..">
+                        </div>
+
+                        <div class="number-input">
+                            <label for="number">
+                                Número de Telefone:
+                            </label>
+                            <input 
+                            type="tel" 
+                            name="number" 
+                            id="number"
+                            required
+                            placeholder="(19) 99830-4090">
+                        </div>
+
+                        <div class="text-area">
+                            <label for="message">
+                                Sua mensagem:
+                            </label>
+                            <textarea 
+                            name="message" 
+                            id="message" 
+                            cols="30" 
+                            rows="10"
+                            required
+                            placeholder="Escreva sua mensagem.."></textarea>
+                        </div>
+
+                        <div class="button-container">
+                            <button type="button" class="submit-button">
+                                Enviar
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <figure>
+                    <img 
+                    src="./img/doggy-shelter/dog-2.jpg" 
+                    alt="Cachorro com pelo da cor preta segurando com a boca um cartão escrito 'Obrigado' em inglês"
+                    tabindex="0">
+
+                    <img 
+                    src="./img/doggy-shelter/dog-3.jpg" 
+                    alt="Cachorro com pelo loiro olhando para cima"
+                    tabindex="0">
+                </figure>
+
+                <div class="donate">
+                    <h3 tabindex="0">
+                        Doe e ajude nossa causa!
+                    </h3>
+                    <p>
+                        Uma maneira de ajudar esses animaizinhos é fazendo uma doação, independente da quantia, é sempre bem-vinda. Contate-nos por esse link para fazer uma doação.
+                    </p>
+                    <a 
+                    href="https://api.whatsapp.com/send?phone=+5519989103966&text=Olá! Gostaria de fazer uma doação!" 
+                    target="_blank"
+                    class="donate-button">
+                        <img 
+                        src="./img/icons/whatsapp.svg" 
+                        alt="Ícone do Whatsapp branco">
+                            Fazer uma Doação
+                    </a>
+                </div>
+
+                <div class="newsletter">
+                    <h3 tabindex="0">Receba nossas novidades!</h3>
+                    <p>
+                        Notícias sobre tudo de novo na <span>Doggy<span>Shelter</span></span>, tudo que você precisa saber para se manter informado sobre o nosso trabalho.
+                    </p>
+                    <form class="form">
+                        <legend class="legend">
+                            Insira seu melhor e-mail:
+                        </legend>
+                        <fieldset class="fieldset">
+                            <input 
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="seunome@gmail.com">
+                            <button class="newsletter-button">
+                                Inscrever-se
+                            </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-left"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="text">
+                <a 
+                href="#" 
+                class="logo">
+                    <img 
+                    src="./img/icons/logo-doggy.svg" 
+                    alt="Logo da DoggyShelter, é uma patinha de cachorro da cor branca com um coração vermelho">
+                    <span>
+                        Doggy<span>Shelter</span>
+                    </span>
+                </a>
+
+                <span>
+                    ©2021 DoggyShelter.
+                </span>
+                <span>
+                    Todos os direitos reservados.
+                </span>
+            </div>
+
+            <ul class="social-media-links">
+                <li>
+                    <a 
+                    href="https://www.instagram.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/instagram.svg"
+                        alt="Ícone do Instagram branco para redes sociais">
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="https://www.facebook.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/facebook.svg"
+                        alt="Ícone do Facebook branco para redes sociais">
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="https://www.youtube.com/" 
+                    target="_target">
+                        <img 
+                        src="./img/icons/youtube.svg"
+                        alt="Ícone do YouTube branco para redes sociais">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <a 
+    href="#" 
+    class="back-to-top-button">
+        <img 
+        src="./img/icons/arrow-up.svg" 
+        alt="Ícone de uma seta branca apontando para cima">
+    </a>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/sidebar.js"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./scripts/swiper.js"></script>
+
+    <script src="./scripts/location-map.js"></script>
+</body>
+</html>
