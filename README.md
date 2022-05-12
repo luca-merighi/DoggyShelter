@@ -10,5 +10,7 @@ Criada utilizando conceitos de:
 1. **SwiperJS** 
 2. **ScrollReveal**
 3. **Leaflet**
-<br/>
-A página possuí semântica, responsividade e acessibilidade com JavaScript e CSS. 
+
+A página possuí semântica, responsividade e acessibilidade com **JavaScript** e **CSS**. 
+
+### [Link para a Página]( "DoggyShelter")
